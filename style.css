@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: Arial;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,22 +10,37 @@ body {
 
 /* Card */
 .container {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 320px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    width: 420px; 
+    min-height: 430px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.container:hover {
+    transform: translateY(-5px);
 }
 
 /* Inputs */
 input, select {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    width: 95%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
     font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102,126,234,0.5);
 }
 
 /* Row */
@@ -36,20 +51,40 @@ input, select {
 }
 
 .row select {
-    width: 40%;
+    width: 45%;
 }
 
+/* Headings */
 h1 {
-    font-size: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
 h2 {
-    color: #007BFF;
+    color: #667eea;
+}
+
+/* Button (if you add one) */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 /* Mobile */
-@media(max-width: 400px) {
+@media(max-width: 450px) {
     .container {
         width: 90%;
+        padding: 25px;
     }
 }
